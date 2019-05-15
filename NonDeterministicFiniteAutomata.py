@@ -117,15 +117,3 @@ class NonDeterministicFiniteAutomata(FiniteAutomata):
             accept = self.runStep()
 
         return accept
-
-
-nfa = NonDeterministicFiniteAutomata(True)
-nfa.addTransition("A", 0, "A")
-nfa.addTransition("A", 1, "A")
-nfa.addTransition("A", 0, "B")
-nfa.addTransition("B", 0, "C")
-nfa.addTransition("A", None, "A")
-nfa.setStateAccepting("C")
-nfa.setStartState("A")
-print(nfa.run([0,1,1,0,0]))
-print(nfa.computationHistory.toString())
