@@ -1,4 +1,4 @@
-# String data structer to use in finite machines.
+# String data structer to use in finite automatas.
 #
 # member data: list of symbols
 #     'data' is shallow copied. So do not change it afterwards.
@@ -12,7 +12,7 @@ class String:
         self.indicator = 0
 
     # Gets symbol that indicator indicates.
-    # return symbol that indicator indicates, 'None' if end of string reached
+    # return: symbol that indicator indicates, 'None' if end of string reached
     def getSymbol(self):
         if self.indicator >= len(self.data):
             return None
