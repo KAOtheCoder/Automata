@@ -1,4 +1,4 @@
-# Stack data structer to use in push down automatas.
+# Stack data structer to use in push down automata.
 #
 # member data: list of symbols
 class Stack:

@@ -1,11 +1,11 @@
 from StateMachine import StateMachine
 from ComputationHistory import ComputationHistory
 
-# Base class for deterministic and non-deterministic push down automatas.
+# Base class for deterministic and non-deterministic push down automata.
 #
 # member stateMachine: state machine
 # member computationHistory: computation history structure
-class PushDownAutomata:
+class PushDownAutomaton:
     def __init__(self, computationHistory = False):
         self.stateMachine = StateMachine()
         self.computationHistory = None

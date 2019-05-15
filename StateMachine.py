@@ -64,7 +64,7 @@ class State:
         return None
 
     # Gets the last transition from transitions.
-    # Suggested for retrivieving transition in deterministic automatas.
+    # Suggested for retrivieving transition in deterministic automata.
     # param inputs: list of inputs
     # return: first transition found, if no transition found 'None' returned
     def getLastTransition(self, inputs):

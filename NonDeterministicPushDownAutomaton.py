@@ -1,14 +1,14 @@
-from PushDownAutomata import PushDownAutomata
+from PushDownAutomaton import PushDownAutomaton
 from String import String
 from Stack import Stack
 from StateMachine import StateMachine
 from StateMachine import Transition
 from ComputationHistory import ComputationHistoryTree
 
-# Non-Deterministic push down automata.
+# Non-Deterministic push down automaton.
 #
 # member currentSteps: holds datas for current steps, designed for step by step running.
-class NonDeterministicPushDownAutomata(PushDownAutomata):
+class NonDeterministicPushDownAutomaton(PushDownAutomaton):
     # Stores datas for current step.
     #
     # member state: name of current state
@@ -30,7 +30,7 @@ class NonDeterministicPushDownAutomata(PushDownAutomata):
         super().__init__(computationHistory)
         self.currentSteps = None
 
-    # Prepares automata to run.
+    # Prepares automaton to run.
     # Must be called before step by step running.
     #
     # param string: list of symbols
@@ -45,7 +45,7 @@ class NonDeterministicPushDownAutomata(PushDownAutomata):
             self.computationHistory.root = ComputationHistoryTree.Node(self.stateMachine.startState, [])
             computationStep.node = self.computationHistory.root
 
-    # Runs one step(one branch) of automata.
+    # Runs one step(one branch) of automaton.
     # return: acceptance
     #     'True' means execution end by accepting
     #     'False' means execution end by accepting
@@ -112,7 +112,7 @@ class NonDeterministicPushDownAutomata(PushDownAutomata):
 
         return None
 
-    # Runs automata until it halts.
+    # Runs automaton until it halts.
     #
     # param string: list of symbols
     # return: acceptance

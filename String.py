@@ -1,4 +1,4 @@
-# String data structer to use in finite automatas.
+# String data structer to use in finite automata.
 #
 # member data: list of symbols
 #     'data' is shallow copied. So do not change it afterwards.
